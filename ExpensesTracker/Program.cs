@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 //DI
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))); // Specify connection string
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); // Specify connection string
 
 var app = builder.Build();
 
